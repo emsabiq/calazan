@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Switch & Jadwal Sholat</title>
+    <link rel="stylesheet" href="css/index-style.css" />
+</head>
+<body>
+    <div class="container">
+        <iframe id="iframe-a" src="a.html" class="visible"></iframe>
+        <iframe id="iframe-b" src="b.html"></iframe>
+        <img id="slide1" src="Slide1.JPG">
+        <img id="slide2" src="Slide2.JPG">
+        <img id="slide3" src="Slide3.JPG">
+        <img id="slide4" src="Slide4.JPG">
+        <img id="slide5" src="Slide5.JPG">
+        <img id="slide6" src="Slide6.JPG">
+        <img id="slide7" src="Slide7.JPG">
+        <img id="slide8" src="Slide8.JPG">
+    </div>
+
+    <div class="audio-container">
+        <audio id="indonesia-raya" preload="auto">
+            <source src="assets/indonesia-raya.mp3" type="audio/mpeg" />
+        </audio>
+        <audio id="adzan-audio" preload="auto">
+            <source src="assets/adzan.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+
+    <div class="info-strip" id="info-strip">
+        <span id="current-time">🕒 --:--:--</span>
+        <span>|</span>
+        <span>Subuh: <span id="subuh">--:--</span></span>
+        <span>|</span>
+        <span>Dzuhur: <span id="dzuhur">--:--</span></span>
+        <span>|</span>
+        <span>Ashar: <span id="ashar">--:--</span></span>
+        <span>|</span>
+        <span>Maghrib: <span id="maghrib">--:--</span></span>
+        <span>|</span>
+        <span>Isya: <span id="isya">--:--</span></span>
+    </div>
+    
+
+    <script src="js/script-index.js"></script>
+</body>
+</html>
