@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+iframe, img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+.visible {
+    opacity: 1;
+    z-index: 1;
+}
+.audio-container {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+/* CLOCK DI POJOK ATAS */
+.clock-container {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Jam digital */
+#current-time {
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    min-width: 70px;
+    text-align: center;
+}
+
+/* Container untuk jadwal adzan */
+.clock-container .jadwal {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+}
+
+.clock-container .jadwal span {
+    font-weight: 600;
+    color: #007BFF;
+}
+
+
+/* STRIP JADWAL ADZAN DI BAWAH */
+.info-strip {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(112, 111, 111, 0.644);
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 8px 12px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.info-strip span {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.info-strip span::after {
+    content: "|";
+    margin-left: 12px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.info-strip span:last-child::after {
+    content: "";
+    margin: 0;
+}
